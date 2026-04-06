@@ -11,7 +11,6 @@ export function StorePage() {
         fetchProducts();
     }, [fetchProducts]);
 
-    // useMemo පාවිච්චි කිරීමෙන් performance වැඩි වෙනවා
     const categories = useMemo(() => {
         const unique = Array.from(new Set(products.map(p => p.category)));
         return unique.sort();

@@ -1,4 +1,4 @@
-import type { Product } from '../types';
+import type { Product } from '../types/index';
 
 interface ProductCardProps {
    product: Product;
@@ -9,9 +9,9 @@ export function ProductCard({ product }: ProductCardProps) {
       <div className="border border-gray-200 rounded-lg p-4 text-center bg-white shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col h-full">
       <div className="h-30 w-full mb-4">
          <img 
-            src={product.thumbnail} 
-            alt={product.title} 
-            className="w-full h-full object-contain" 
+            src={product.thumbnail}
+            alt={product.title}
+            className="w-full h-full object-contain"
          />
       </div>
       <h3 className="text-lg font-semibold text-gray-800 mb-2 line-clamp-1">
