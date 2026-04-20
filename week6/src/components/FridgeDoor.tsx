@@ -1,0 +1,17 @@
+import { useDroppable } from '@dnd-kit/core';
+
+export default function FridgeDoor({ children }: { children: React.ReactNode }) {
+  const { setNodeRef, isOver } = useDroppable({ id: 'fridge' });
+
+  return (
+    <div
+      ref={setNodeRef}
+      style={{ position: 'relative' }}
+      className={`w-full h-96 border-4 rounded-xl transition-colors ${
+        isOver ? 'border-blue-400 bg-blue-50' : 'border-gray-300 bg-gray-100'
+      }`}
+    >
+      {children}
+    </div>
+  );
+}
