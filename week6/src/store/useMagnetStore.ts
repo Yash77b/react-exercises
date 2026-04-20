@@ -11,7 +11,6 @@ export const useMagnetStore = create<MagnetStore>((set) => ({
   magnets: [
     { id: '1', word: 'love', status: 'bank', x: 0, y: 0 },
     { id: '2', word: 'rain', status: 'bank', x: 0, y: 0 },
-    // ...add more words
   ],
   updateMagnet: (id, changes) =>
     set((state) => ({
@@ -22,7 +21,6 @@ export const useMagnetStore = create<MagnetStore>((set) => ({
       magnets: [
         ...state.magnets,
         { id: 'e1', word: 'dream', status: 'bank', x: 0, y: 0 },
-        // ...add more
       ],
     })),
 }));
